@@ -2,10 +2,10 @@ package com.skypro.basket.model;
 
 public class Item {
     private static int counter;
-    private final int id;
+    private int id;
 
     public Item(int id) {
-        this.id = counter++;
+        this.id = id;
     }
 
     public int getId() {
@@ -13,14 +13,10 @@ public class Item {
     }
 
 
-
-
-
     @Override
     public String toString() {
-        return "Basket{" +
+        return "Item{" +
                 "id=" + id +
-                 '\'' +
                 '}';
     }
 }
