@@ -4,8 +4,6 @@ import com.skypro.basket.model.Item;
 import com.skypro.basket.service.ItemService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
 import java.util.Collection;
 
 import static java.util.Arrays.stream;

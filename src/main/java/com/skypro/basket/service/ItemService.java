@@ -17,8 +17,8 @@ public class ItemService {
 
     public Collection<Item> addItems(Collection<Item> toList) {
         for (Item item : toList) {
-            basket.add(new Item(item.getId(), item.getItem()));
+            basket.add(new Item(item.getId()));
         }
-        return null;
+        return toList;
     }
 }
