@@ -1,2 +1,6 @@
 ### Получить все добавленные ID
 GET http://localhost:8080/store/order/get
+
+### Добавление товаров в корзину
+GET http://localhost:8080/store/order/add
+

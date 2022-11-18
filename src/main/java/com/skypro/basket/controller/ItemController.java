@@ -5,7 +5,10 @@ import com.skypro.basket.service.ItemService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Collection;
+
+import static java.util.Arrays.stream;
 
 @RestController
 public class ItemController {
@@ -21,24 +24,8 @@ public class ItemController {
         return this.itemService.getFullBasket();
     }
 
-    @GetMapping("/store/order")
-    public String greeting(){
-        return "Введите ID товара.";
+    @GetMapping("/store/order/add")
+    public Collection<Item> addItems(Item...item){
+        return this.itemService.addItems(stream(item).toList());
     }
 }
-//@Controller
-//public class GreetingController {
-//
-//    @GetMapping("/greeting")
-//    public String greetingForm(Model model) {
-//        model.addAttribute("greeting", new Greeting());
-//        return "greeting";
-//    }
-//
-//    @PostMapping("/greeting")
-//    public String greetingSubmit(@ModelAttribute Greeting greeting, Model model) {
-//        model.addAttribute("greeting", greeting);
-//        return "result";
-//    }
-//
-//}

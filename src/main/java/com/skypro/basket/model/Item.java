@@ -4,10 +4,8 @@ public class Item {
     private static int counter;
     private final int id;
     private final String item;
-    private final int amount;
 
-    public Item(int id, String item, int amount) {
-        this.amount = amount;
+    public Item(int id, String item) {
         this.id = counter++;
         this.item = item;
     }
@@ -20,9 +18,7 @@ public class Item {
         return item;
     }
 
-    public int getAmount() {
-        return amount;
-    }
+
 
     @Override
     public String toString() {
