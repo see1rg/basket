@@ -1,14 +1,14 @@
 package com.skypro.basket.service;
 
 import com.skypro.basket.model.Item;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.SessionScope;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
-@Scope("session")
+@SessionScope
 public class ItemService {
 
     private final List<Item> basket = new ArrayList<>();
